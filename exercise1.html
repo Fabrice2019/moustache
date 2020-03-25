@@ -10,23 +10,20 @@
 <body>
 <div id="mustache" class="mustache"></div>
 <script>
-/*	let mustache=document.querySelector("#mustache");
-mustache.onclick=toggleClass;
-
-function toggleClass(){
-	if(mustache.className=="mustache"){
-      mustache.className="mustache"
-	} else{mustache.className=""}
-}*/
-/*const mustache = document.querySelector("#mustache");
-let isAdded =false;
-mustache.addEventListener('click',()=> {
-	if(!isAdded) {
-		mustache.classList.add('mustache');
-	} else {
-		mustache.classList.remove('mustache');
+	function myMove(){
+		var elem = document.getElementById('mustache');
+		var pos = 0;
+		var id = setInterval(frame,5);
+		function frame(){
+			if(pos==350){
+				clearInterval(id);
+			} else {
+				pos++;
+				elem.style.top = pos + "px";
+				elem.style.button = pos + "px";
+			}
+		}
 	}
-});*/
 </script>
 </body>
 </html>
